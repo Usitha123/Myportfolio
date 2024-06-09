@@ -1,0 +1,62 @@
+
+html, body {
+    height: 100%;
+    margin: 0; 
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.div1{
+    margin: 0;
+    width: auto;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color: black;
+    color: white;
+}
+
+.div1 ul li{
+    
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+}
+
+.div1 ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.image img{
+    margin-left: 40px;
+    margin-top: 70px;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 7px solid black;
+}
+
+.div2{
+    display: flex;
+    background-color: whitesmoke;
+    height: 615px;
+}
+
+.div4{
+    background-color: whitesmoke;
+    width: 100%;
+}
+
+.div3 {
+    width: auto;
+    height: 40px;
+    background-color: black;
+    color: white;
+    margin-top: auto; 
+}
