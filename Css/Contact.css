@@ -1,0 +1,14 @@
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkicon {
+    display: flex; 
+}
+
+.linkicon ul li{
+    list-style: none;
+}
+  

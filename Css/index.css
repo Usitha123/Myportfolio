@@ -2,6 +2,8 @@
 html, body {
     height: 100%;
     margin: 0; 
+    font-family:   Honey Crepes;
+    background-color: #B3D697;
 }
 
 .main {
@@ -16,9 +18,14 @@ html, body {
     height: 40px;
     display: flex;
     align-items: center;
-    justify-content: end;
-    background-color: black;
-    color: white;
+    justify-content: space-between;
+    background-color: #081b29;
+    color: whitesmoke;
+}
+
+.div1 p{
+    margin-left: 30px;
+    font-size: 20px;
 }
 
 .div1 ul li{
@@ -30,7 +37,11 @@ html, body {
 
 .div1 ul li a{
     text-decoration: none;
-    color: white;
+    color: whitesmoke;
+}
+
+.div1 ul li a:hover{
+    color: grey;
 }
 
 .image img{
@@ -43,20 +54,29 @@ html, body {
 }
 
 .div2{
+    margin-left: 180px;
+    margin-top: 30px;
     display: flex;
-    background-color: whitesmoke;
-    height: 615px;
+    background-color: #B3D697;
+    height: 585px;
 }
 
 .div4{
-    background-color: whitesmoke;
-    width: 100%;
+    margin-left: 200px;
+    margin-top: 80px;
+    background-color: #B3D697;
+    height: 300px;
+    width: 600px;
 }
+
 
 .div3 {
     width: auto;
     height: 40px;
-    background-color: black;
+    background-color: #081b29;
     color: white;
     margin-top: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

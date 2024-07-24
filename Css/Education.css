@@ -1,0 +1,18 @@
+.skills ul{
+    display: flex; 
+}
+
+.skills ul li{
+    list-style: none;
+    margin-right: 10px;
+}   
+
+.skills img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.edu{
+    margin-left: 100px;
+}
