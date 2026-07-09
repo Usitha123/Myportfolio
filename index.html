@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>My Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,7 +13,7 @@
 
   <nav class="navbar">
     <div class="container">
-      <a href="#" class="logo">Portfolio</a>
+      <a href="#" class="logo">My Portfolio</a>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -35,12 +35,13 @@
         <p class="hero-desc">Building digital experiences with clean code and creative design.</p>
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="https://drive.google.com/file/u/1/d/15duKkipFfEWitBTGW2rehcUx-FvgMIgE/view?usp=sharing"
+            target="_blank" class="btn btn-download"><i class="fas fa-download"></i> Download My CV</a>
           <a href="#contact" class="btn btn-secondary">Contact Me</a>
         </div>
         <div class="hero-socials">
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="https://github.com/Usitha123" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/usitha-kalyana-4a3627299" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
     </div>
@@ -51,9 +52,7 @@
       <h2 class="section-title">About Me</h2>
       <div class="about-content">
         <div class="about-image">
-          <div class="about-img-placeholder">
-            <i class="fas fa-user"></i>
-          </div>
+          <img src="src/profile_img.jpg" alt="Profile Photo" class="about-img">
         </div>
         <div class="about-text">
           <h3>Passionate Developer & Designer</h3>
@@ -71,6 +70,8 @@
             <div class="stat"><span class="stat-number">20+</span><span class="stat-label">Projects</span></div>
             <div class="stat"><span class="stat-number">15+</span><span class="stat-label">Clients</span></div>
           </div>
+          <a href="https://drive.google.com/file/u/1/d/15duKkipFfEWitBTGW2rehcUx-FvgMIgE/view?usp=sharing" target="_blank"
+            class="btn btn-download about-download"><i class="fas fa-download"></i> Download CV</a>
         </div>
       </div>
     </div>
@@ -215,6 +216,20 @@
               <p>+94 75 533 8765</p>
             </div>
           </div>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <div>
+              <h4>GitHub</h4>
+              <a href="https://github.com/Usitha123" target="_blank" class="contact-link">github.com/Usitha123</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-linkedin-in"></i>
+            <div>
+              <h4>LinkedIn</h4>
+              <a href="https://www.linkedin.com/in/usitha-kalyana-4a3627299" target="_blank" class="contact-link">usitha-kalyana</a>
+            </div>
+          </div>
         </div>
         <form class="contact-form" id="contactForm">
           <input type="text" name="name" placeholder="Your Name" required>
@@ -222,14 +237,16 @@
           <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
           <div class="form-options">
             <button type="submit" class="btn btn-primary">Send via Email</button>
-            <button type="button" class="btn btn-whatsapp" id="whatsappSend"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
+            <button type="button" class="btn btn-whatsapp" id="whatsappSend"><i class="fab fa-whatsapp"></i> Send via
+              WhatsApp</button>
           </div>
         </form>
       </div>
     </div>
   </section>
 
-  <a href="https://wa.me/94755338765" target="_blank" class="whatsapp-float" id="whatsappFloat" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/94755338765" target="_blank" class="whatsapp-float" id="whatsappFloat"
+    aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 

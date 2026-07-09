@@ -1,4 +1,3 @@
-// Typing effect
 const roles = ["Web Developer", "UI/UX Designer", "Creative Thinker"];
 const typedText = document.getElementById("typedText");
 let roleIndex = 0;
@@ -62,6 +61,55 @@ document.querySelectorAll(".nav-links a").forEach(link => {
   link.addEventListener("click", () => navLinks.classList.remove("active"));
 });
 
+// Scroll effects: navbar shadow + active nav link + progress bars
+const sections = document.querySelectorAll("section[id]");
+const navAnchors = document.querySelectorAll(".nav-links a");
+const navbar = document.querySelector(".navbar");
+const progressBars = document.querySelectorAll(".progress");
+
+function onScroll() {
+  const scrollY = window.scrollY;
+
+  // Navbar shadow
+  navbar.classList.toggle("scrolled", scrollY > 50);
+
+  // Active nav link
+  let current = "";
+  sections.forEach(section => {
+    const top = section.offsetTop - 150;
+    const bottom = top + section.offsetHeight;
+    if (scrollY >= top && scrollY < bottom) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navAnchors.forEach(anchor => {
+    anchor.classList.toggle("active", anchor.getAttribute("href") === `#${current}`);
+  });
+
+  // Animate progress bars when skills section is visible
+  const skillsSection = document.getElementById("skills");
+  if (skillsSection) {
+    const rect = skillsSection.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      progressBars.forEach(bar => {
+        const w = bar.getAttribute("data-width") || bar.style.width;
+        if (!bar.getAttribute("data-width")) {
+          bar.setAttribute("data-width", bar.style.width);
+        }
+        bar.style.width = w;
+      });
+    } else {
+      progressBars.forEach(bar => {
+        bar.style.width = "0";
+      });
+    }
+  }
+}
+
+window.addEventListener("scroll", onScroll);
+onScroll();
+
 // Scroll animations
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -69,16 +117,16 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.add("visible");
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.12 });
 
 document.querySelectorAll("section").forEach(section => {
   section.classList.add("fade-in");
   observer.observe(section);
 });
 
+// WhatsApp
 const WHATSAPP_NUMBER = "94755338765";
 
-// Send via WhatsApp button
 document.getElementById("whatsappSend").addEventListener("click", () => {
   const form = document.getElementById("contactForm");
   const name = form.querySelector("input[name='name']").value.trim();
@@ -97,34 +145,13 @@ document.getElementById("whatsappSend").addEventListener("click", () => {
 // Contact form (email)
 document.getElementById("contactForm").addEventListener("submit", (e) => {
   e.preventDefault();
-  const btn = e.target.querySelector("button[type='submit']");
-  const original = btn.textContent;
-  btn.textContent = "Sending...";
-  btn.disabled = true;
-
   const form = e.target;
-  const data = new FormData(form);
-
-  fetch("https://formspree.io/f/YOUR_FORM_ID", {
-    method: "POST",
-    body: data,
-    headers: { "Accept": "application/json" }
-  }).then(() => {
-    btn.textContent = "Sent!";
-    btn.style.background = "#00c9a7";
-    form.reset();
-    setTimeout(() => {
-      btn.textContent = original;
-      btn.style.background = "";
-      btn.disabled = false;
-    }, 2000);
-  }).catch(() => {
-    btn.textContent = "Error";
-    btn.style.background = "#e74c3c";
-    setTimeout(() => {
-      btn.textContent = original;
-      btn.style.background = "";
-      btn.disabled = false;
-    }, 2000);
-  });
+  const name = form.querySelector("input[name='name']").value.trim();
+  const email = form.querySelector("input[name='email']").value.trim();
+  const message = form.querySelector("textarea[name='message']").value.trim();
+  const recipient = "Usithakalyana@gmail.com";
+  const subject = `Portfolio inquiry from ${name}`;
+  const body = `Name: ${name}%0AEmail: ${email}%0A%0A${message}`;
+  window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${body}`;
+  form.reset();
 });
