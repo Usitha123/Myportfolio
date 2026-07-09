@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">Portfolio</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Usitha Kalyana</h1>
+        <p class="hero-role"><span id="typedText"></span><span class="cursor">|</span></p>
+        <p class="hero-desc">Building digital experiences with clean code and creative design.</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+        <div class="hero-socials">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-image">
+          <div class="about-img-placeholder">
+            <i class="fas fa-user"></i>
+          </div>
+        </div>
+        <div class="about-text">
+          <h3>Passionate Developer & Designer</h3>
+          <p>
+            I am a creative developer dedicated to crafting clean, user-friendly digital experiences.
+            With a strong foundation in modern web technologies, I transform ideas into responsive,
+            performant applications that delight users.
+          </p>
+          <p>
+            Currently focused on full-stack development, I enjoy solving complex problems and
+            continuously learning new technologies to stay at the cutting edge.
+          </p>
+          <div class="about-stats">
+            <div class="stat"><span class="stat-number">3+</span><span class="stat-label">Years Exp.</span></div>
+            <div class="stat"><span class="stat-number">20+</span><span class="stat-label">Projects</span></div>
+            <div class="stat"><span class="stat-number">15+</span><span class="stat-label">Clients</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="section-title">My Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fab fa-html5"></i>
+          <h4>HTML</h4>
+          <div class="progress-bar">
+            <div class="progress" style="width:92%"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-css3-alt"></i>
+          <h4>CSS</h4>
+          <div class="progress-bar">
+            <div class="progress" style="width:88%"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-js"></i>
+          <h4>JavaScript</h4>
+          <div class="progress-bar">
+            <div class="progress" style="width:85%"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-react"></i>
+          <h4>React</h4>
+          <div class="progress-bar">
+            <div class="progress" style="width:80%"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-node"></i>
+          <h4>Node.js</h4>
+          <div class="progress-bar">
+            <div class="progress" style="width:78%"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-python"></i>
+          <h4>Python</h4>
+          <div class="progress-bar">
+            <div class="progress" style="width:75%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-img" style="background:#6c63ff20;">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <div class="project-info">
+            <h3>E-Commerce App</h3>
+            <p>A full-stack shopping platform with real-time cart, payment integration, and admin dashboard.</p>
+            <div class="project-tags">
+              <span>React</span><span>Node.js</span><span>MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="#"><i class="fab fa-github"></i> Code</a>
+              <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img" style="background:#00c9a720;">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="project-info">
+            <h3>AI Chatbot</h3>
+            <p>Intelligent conversational agent built with NLP, capable of context-aware responses.</p>
+            <div class="project-tags">
+              <span>Python</span><span>TensorFlow</span><span>Flask</span>
+            </div>
+            <div class="project-links">
+              <a href="#"><i class="fab fa-github"></i> Code</a>
+              <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img" style="background:#ff658420;">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="project-info">
+            <h3>Analytics Dashboard</h3>
+            <p>Real-time data visualization dashboard with interactive charts and export capabilities.</p>
+            <div class="project-tags">
+              <span>Vue.js</span><span>D3.js</span><span>Firebase</span>
+            </div>
+            <div class="project-links">
+              <a href="#"><i class="fab fa-github"></i> Code</a>
+              <a href="#"><i class="fas fa-external-link-alt"></i> Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>Usithakalyana@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <p>+94 75 533 8765</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <p>Sri Lanka</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <h4>WhatsApp</h4>
+              <p>+94 75 533 8765</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+          <div class="form-options">
+            <button type="submit" class="btn btn-primary">Send via Email</button>
+            <button type="button" class="btn btn-whatsapp" id="whatsappSend"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <a href="https://wa.me/94755338765" target="_blank" class="whatsapp-float" id="whatsappFloat" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Usitha Kalyana. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
